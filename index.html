@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Betacom - Giải Pháp Thương Mại Điện Tử</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet" />
+    <!-- Google Fonts: Inter (Giống phong cách hiện đại của Momo) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* Hiệu ứng Hover Card kiểu Momo */
+      .momo-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .momo-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.1),
+          0 10px 10px -5px rgba(220, 38, 38, 0.04); /* Red Shadow on hover */
+        border-color: #fecaca; /* red-200 */
+      }
+
+      /* Custom Scrollbar ẩn cho các phần cuộn ngang */
+      .hide-scroll::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scroll {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-white text-gray-800 antialiased selection:bg-red-100 selection:text-red-700">
+    <!-- HEADER / NAVIGATION -->
+    <header
+      class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+          <img
+            src="./footer_logo.png"
+            alt="Betacom Logo"
+            class="w-10 h-10" />
+          <div class="flex flex-col">
+            <span
+              class="text-2xl font-extrabold text-red-600 tracking-tight leading-none"
+              >BETACOM</span
+            >
+            <span
+              class="text-[10px] font-semibold text-gray-400 tracking-widest uppercase"
+              >Agency</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav
+          class="hidden lg:flex items-center gap-8 font-medium text-sm text-gray-600">
+          <a
+            href="#home"
+            class="text-red-600 font-bold bg-red-50 px-3 py-1 rounded-lg"
+            >Trang chủ</a
+          >
+          <a
+            href="#about"
+            class="hover:text-red-600 transition hover:bg-gray-50 px-3 py-1 rounded-lg"
+            >Về chúng tôi</a
+          >
+          <a
+            href="#services"
+            class="hover:text-red-600 transition hover:bg-gray-50 px-3 py-1 rounded-lg"
+            >Dịch vụ</a
+          >
+          <a
+            href="#casestudy"
+            class="hover:text-red-600 transition hover:bg-gray-50 px-3 py-1 rounded-lg"
+            >Dự án</a
+          >
+          <a
+            href="#news"
+            class="hover:text-red-600 transition hover:bg-gray-50 px-3 py-1 rounded-lg"
+            >Tin tức</a
+          >
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden lg:block">
+          <a
+            href="#contact"
+            class="bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-red-200 transition transform hover:-translate-y-0.5 border border-red-600">
+            Liên hệ ngay
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="lg:hidden text-gray-600 text-2xl focus:outline-none hover:text-red-600 transition"
+          onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-white border-t border-gray-100 p-4 shadow-lg absolute w-full z-50">
+        <div class="flex flex-col gap-4 font-medium">
+          <a href="#home" class="text-red-600 bg-red-50 p-2 rounded-lg"
+            >Trang chủ</a
+          >
+          <a href="#about" class="p-2">Giới thiệu</a>
+          <a href="#services" class="p-2">Dịch vụ</a>
+          <a href="#casestudy" class="p-2">Case Study</a>
+          <a
+            href="#contact"
+            class="bg-red-600 text-white p-3 rounded-xl text-center shadow-lg shadow-red-200"
+            >Liên hệ tư vấn</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative pt-12 pb-20 overflow-hidden bg-white">
+      <!-- Background Pattern -->
+      <div
+        class="absolute top-0 right-0 w-1/2 h-full bg-red-50/30 -skew-x-12 translate-x-1/4 -z-10"></div>
+
+      <div
+        class="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2 space-y-6">
+          <div
+            class="inline-flex items-center gap-2 bg-white border border-red-100 px-4 py-1.5 rounded-full shadow-sm">
+            <span class="relative flex h-3 w-3">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span
+                class="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
+            </span>
+            <span class="text-xs font-bold text-red-600 uppercase tracking-wide"
+              >Giải pháp TMĐT toàn diện</span
+            >
+          </div>
+          <h1
+            class="text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+            Tăng trưởng <br />
+            <span class="text-red-600">Doanh Thu Bền Vững</span> <br />
+            cùng Betacom
+          </h1>
+          <p
+            class="text-lg text-gray-500 max-w-lg border-l-4 border-red-200 pl-4">
+            Chúng tôi cung cấp hệ sinh thái dịch vụ từ Vận hành sàn, Marketing
+            đến Thiết kế, giúp thương hiệu của bạn bứt phá trên môi trường số.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a
+              href="#services"
+              class="flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl shadow-red-200 hover:bg-red-700 transition hover:-translate-y-1">
+              Xem dịch vụ <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a
+              href="#about"
+              class="flex items-center gap-2 bg-white text-red-600 border-2 border-red-100 px-8 py-4 rounded-2xl font-bold hover:bg-red-50 hover:border-red-200 transition">
+              Về Betacom
+            </a>
+          </div>
+
+          <!-- Mini Achievements in Hero -->
+          <div class="flex gap-10 pt-8">
+            <div>
+              <span class="block text-3xl font-extrabold text-gray-900"
+                >500<span class="text-red-600">+</span></span
+              >
+              <span class="text-sm text-gray-500 font-medium"
+                >Dự án thành công</span
+              >
+            </div>
+            <div>
+              <span class="block text-3xl font-extrabold text-gray-900"
+                >98<span class="text-red-600">%</span></span
+              >
+              <span class="text-sm text-gray-500 font-medium"
+                >Khách hàng hài lòng</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 relative">
+          <!-- Decorative Red Circles -->
+          <div
+            class="absolute -top-10 -right-10 w-72 h-72 bg-red-50 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
+          <div
+            class="absolute bottom-10 -left-10 w-72 h-72 bg-red-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
+
+          <!-- Main Image Card -->
+          <div
+            class="relative bg-white p-3 rounded-[2.5rem] shadow-2xl border border-gray-100 ring-4 ring-gray-50 ring-offset-2">
+            <img
+              src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Betacom Office"
+              class="rounded-[2rem] w-full object-cover h-[450px] grayscale hover:grayscale-0 transition duration-700" />
+
+            <!-- Floating Card -->
+            <div
+              class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl border border-red-50 flex items-center gap-4 animate-bounce md:flex hidden">
+              <div
+                class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center text-red-600">
+                <i class="fa-solid fa-chart-line text-2xl"></i>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 font-bold uppercase">
+                  Tăng trưởng
+                </p>
+                <p class="font-extrabold text-xl text-gray-900">
+                  +150% Traffic
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMOTION / ƯU ĐÃI (Strictly Red & White Theme) -->
+    <section class="py-10 border-y border-gray-100 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
+            <span
+              class="bg-red-100 text-red-600 w-8 h-8 flex items-center justify-center rounded-lg"
+              ><i class="fa-solid fa-gift"></i
+            ></span>
+            Ưu đãi HOT
+          </h2>
+          <a
+            href="#"
+            class="text-sm text-red-600 font-bold hover:text-red-700 hover:underline"
+            >Xem tất cả <i class="fa-solid fa-chevron-right text-xs"></i
+          ></a>
+        </div>
+        <!-- Horizontal Scroll Container -->
+        <div class="flex overflow-x-auto gap-5 pb-6 hide-scroll snap-x">
+          <!-- Promo Item 1 (Red Gradient) -->
+          <div
+            class="min-w-[300px] md:min-w-[380px] bg-gradient-to-br from-red-600 to-red-500 rounded-2xl p-6 text-white shadow-xl shadow-red-100 relative snap-center cursor-pointer group">
+            <div
+              class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition">
+              <i class="fa-solid fa-tags text-7xl"></i>
+            </div>
+            <span
+              class="bg-white/20 backdrop-blur-md text-white border border-white/30 text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block"
+              >Vận hành sàn</span
+            >
+            <h3 class="font-bold text-2xl mb-2">Giảm 30% Phí Setup</h3>
+            <p class="text-sm text-red-50 mb-6 opacity-90">
+              Dành cho khách hàng mới đăng ký gói vận hành Shopee/Lazada quý
+              này.
+            </p>
+            <button
+              class="bg-white text-red-600 px-6 py-2 rounded-xl text-sm font-bold w-full hover:bg-red-50 transition shadow-sm">
+              Nhận ưu đãi
+            </button>
+          </div>
+          <!-- Promo Item 2 (White with Red Border) -->
+          <div
+            class="min-w-[300px] md:min-w-[380px] bg-white border-2 border-red-100 rounded-2xl p-6 text-gray-800 shadow-lg relative snap-center cursor-pointer group hover:border-red-300 transition">
+            <div
+              class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition">
+              <i class="fa-solid fa-laptop-code text-7xl text-red-600"></i>
+            </div>
+            <span
+              class="bg-red-50 text-red-600 text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block"
+              >Website</span
+            >
+            <h3
+              class="font-bold text-2xl mb-2 group-hover:text-red-600 transition">
+              Tặng 1 năm Hosting
+            </h3>
+            <p class="text-sm text-gray-500 mb-6">
+              Áp dụng khi ký hợp đồng thiết kế website doanh nghiệp trọn gói.
+            </p>
+            <button
+              class="bg-red-50 text-red-600 border border-red-100 px-6 py-2 rounded-xl text-sm font-bold w-full hover:bg-red-600 hover:text-white transition">
+              Chi tiết
+            </button>
+          </div>
+          <!-- Promo Item 3 (Dark Gray for Contrast) -->
+          <div
+            class="min-w-[300px] md:min-w-[380px] bg-gray-900 rounded-2xl p-6 text-white shadow-lg relative snap-center cursor-pointer group">
+            <div class="absolute top-0 right-0 p-4 opacity-10">
+              <i class="fa-solid fa-camera text-7xl"></i>
+            </div>
+            <span
+              class="bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block"
+              >Media</span
+            >
+            <h3 class="font-bold text-2xl mb-2">Free Chụp Ảnh SP</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Gói chụp concept cơ bản cho 10 SKU đầu tiên khi sử dụng dịch vụ.
+            </p>
+            <button
+              class="bg-white text-gray-900 px-6 py-2 rounded-xl text-sm font-bold w-full hover:bg-gray-100 transition">
+              Đăng ký ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US: VMS & HISTORY (Clean White Theme) -->
+    <section id="about" class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-red-600 font-bold tracking-widest uppercase text-xs border border-red-100 px-3 py-1 rounded-full mb-4 inline-block"
+            >Về Chúng Tôi</span
+          >
+          <h3 class="text-3xl md:text-5xl font-extrabold text-gray-900 mt-2">
+            Sứ mệnh kiến tạo <span class="text-red-600">Giá trị số</span>
+          </h3>
+        </div>
+
+        <!-- VMS Grid - Unified Icons Color -->
+        <div class="grid md:grid-cols-3 gap-8 mb-24">
+          <!-- Vision -->
+          <div
+            class="bg-white p-10 rounded-[2rem] shadow-xl shadow-gray-100 border border-gray-50 text-center momo-card group">
+            <div
+              class="w-20 h-20 mx-auto bg-gray-50 rounded-full flex items-center justify-center text-red-600 text-3xl mb-8 group-hover:bg-red-600 group-hover:text-white transition duration-300">
+              <i class="fa-regular fa-eye"></i>
+            </div>
+            <h4 class="text-xl font-bold mb-4 text-gray-900">Tầm Nhìn</h4>
+            <p class="text-gray-500 leading-relaxed text-sm">
+              Trở thành Agency hàng đầu về giải pháp chuyển đổi số và thương mại
+              điện tử tại Việt Nam vào năm 2030.
+            </p>
+          </div>
+          <!-- Mission -->
+          <div
+            class="bg-red-600 p-10 rounded-[2rem] shadow-xl shadow-red-200 text-center transform scale-105 z-10 relative overflow-hidden">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -mr-10 -mt-10"></div>
+            <div
+              class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center text-red-600 text-3xl mb-8 shadow-lg">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h4 class="text-xl font-bold mb-4 text-white">Sứ Mệnh</h4>
+            <p class="text-red-100 leading-relaxed text-sm">
+              Đồng hành cùng doanh nghiệp Việt Nam tối ưu hóa vận hành, bùng nổ
+              doanh số thông qua công nghệ.
+            </p>
+          </div>
+          <!-- Core Values -->
+          <div
+            class="bg-white p-10 rounded-[2rem] shadow-xl shadow-gray-100 border border-gray-50 text-center momo-card group">
+            <div
+              class="w-20 h-20 mx-auto bg-gray-50 rounded-full flex items-center justify-center text-red-600 text-3xl mb-8 group-hover:bg-red-600 group-hover:text-white transition duration-300">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <h4 class="text-xl font-bold mb-4 text-gray-900">
+              Giá Trị Cốt Lõi
+            </h4>
+            <p class="text-gray-500 leading-relaxed text-sm">
+              Tận tâm - Chuyên nghiệp - Sáng tạo - Hiệu quả. Khách hàng là trung
+              tâm của mọi hành động.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES / GÓI DỊCH VỤ (UNIFIED RED & WHITE THEME) -->
+    <section id="services" class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+          <div class="max-w-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              Hệ sinh thái dịch vụ
+            </h2>
+            <p class="text-gray-500">
+              Tất cả những gì bạn cần để kinh doanh thành công trên Internet,
+              được quy chuẩn hóa và tối ưu chi phí.
+            </p>
+          </div>
+          <a
+            href="#contact"
+            class="px-6 py-3 border border-gray-200 rounded-xl font-bold text-sm hover:border-red-600 hover:text-red-600 transition"
+            >Nhận báo giá <i class="fa-solid fa-file-invoice ml-2"></i
+          ></a>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          <!-- Service 1 -->
+          <div class="group cursor-pointer">
+            <div
+              class="bg-gray-50 rounded-[2rem] p-8 flex flex-col items-center justify-center aspect-square hover:bg-red-600 transition duration-500 relative overflow-hidden group">
+              <div
+                class="absolute inset-0 bg-red-600 transform scale-0 group-hover:scale-150 rounded-full transition duration-500 origin-center opacity-100 -z-0"></div>
+              <i
+                class="fa-solid fa-shop text-4xl text-red-600 mb-6 group-hover:text-white z-10 transition"></i>
+              <h4
+                class="font-bold text-gray-900 text-center group-hover:text-white z-10 transition">
+                Vận hành sàn TMĐT
+              </h4>
+              <span
+                class="text-xs text-gray-400 mt-2 group-hover:text-red-100 z-10 transition"
+                >Shopee, Lazada, TikTok</span
+              >
+            </div>
+          </div>
+          <!-- Service 2 -->
+          <div class="group cursor-pointer">
+            <div
+              class="bg-gray-50 rounded-[2rem] p-8 flex flex-col items-center justify-center aspect-square hover:bg-red-600 transition duration-500 relative overflow-hidden">
+              <div
+                class="absolute inset-0 bg-red-600 transform scale-0 group-hover:scale-150 rounded-full transition duration-500 origin-center opacity-100 -z-0"></div>
+              <i
+                class="fa-solid fa-bullhorn text-4xl text-red-600 mb-6 group-hover:text-white z-10 transition"></i>
+              <h4
+                class="font-bold text-gray-900 text-center group-hover:text-white z-10 transition">
+                Digital Marketing
+              </h4>
+              <span
+                class="text-xs text-gray-400 mt-2 group-hover:text-red-100 z-10 transition"
+                >Ads, SEO, Social</span
+              >
+            </div>
+          </div>
+          <!-- Service 3 -->
+          <div class="group cursor-pointer">
+            <div
+              class="bg-gray-50 rounded-[2rem] p-8 flex flex-col items-center justify-center aspect-square hover:bg-red-600 transition duration-500 relative overflow-hidden">
+              <div
+                class="absolute inset-0 bg-red-600 transform scale-0 group-hover:scale-150 rounded-full transition duration-500 origin-center opacity-100 -z-0"></div>
+              <i
+                class="fa-solid fa-pen-nib text-4xl text-red-600 mb-6 group-hover:text-white z-10 transition"></i>
+              <h4
+                class="font-bold text-gray-900 text-center group-hover:text-white z-10 transition">
+                Thiết kế & Branding
+              </h4>
+              <span
+                class="text-xs text-gray-400 mt-2 group-hover:text-red-100 z-10 transition"
+                >Logo, Banner, UI/UX</span
+              >
+            </div>
+          </div>
+          <!-- Service 4 -->
+          <div class="group cursor-pointer">
+            <div
+              class="bg-gray-50 rounded-[2rem] p-8 flex flex-col items-center justify-center aspect-square hover:bg-red-600 transition duration-500 relative overflow-hidden">
+              <div
+                class="absolute inset-0 bg-red-600 transform scale-0 group-hover:scale-150 rounded-full transition duration-500 origin-center opacity-100 -z-0"></div>
+              <i
+                class="fa-solid fa-code text-4xl text-red-600 mb-6 group-hover:text-white z-10 transition"></i>
+              <h4
+                class="font-bold text-gray-900 text-center group-hover:text-white z-10 transition">
+                Thiết kế Website
+              </h4>
+              <span
+                class="text-xs text-gray-400 mt-2 group-hover:text-red-100 z-10 transition"
+                >Landing Page, E-com</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Packages List -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Pack 1 -->
+          <div
+            class="border border-gray-100 bg-white rounded-3xl p-8 hover:border-red-200 hover:shadow-xl hover:shadow-red-50 transition duration-300">
+            <h4 class="font-bold text-xl mb-4 text-gray-800">Gói Cơ Bản</h4>
+            <ul class="text-sm text-gray-500 space-y-4 mb-8">
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-check-circle text-red-600 mr-3 text-lg"></i
+                >Setup gian hàng chuẩn SEO
+              </li>
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-check-circle text-red-600 mr-3 text-lg"></i
+                >Thiết kế 5 Banner/tháng
+              </li>
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-check-circle text-red-600 mr-3 text-lg"></i
+                >Đăng 20 sản phẩm mẫu
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="block w-full py-3 text-center border border-gray-200 text-gray-600 font-bold rounded-xl hover:bg-gray-900 hover:text-white transition"
+              >Tư vấn chi tiết</a
+            >
+          </div>
+          <!-- Pack 2 (Highlighted) -->
+          <div
+            class="border-2 border-red-600 bg-white rounded-3xl p-8 relative shadow-2xl shadow-red-100 transform md:-translate-y-4">
+            <div
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+              Best Seller
+            </div>
+            <h4 class="font-bold text-xl mb-4 text-red-600">Gói Tăng Trưởng</h4>
+            <ul class="text-sm text-gray-600 space-y-4 mb-8">
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-circle-check text-red-600 mr-3 text-lg"></i
+                ><strong>Toàn bộ quyền lợi gói Cơ bản</strong>
+              </li>
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-circle-check text-red-600 mr-3 text-lg"></i
+                >Tối ưu quảng cáo nội sàn
+              </li>
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-circle-check text-red-600 mr-3 text-lg"></i
+                >Chăm sóc khách hàng & Chat
+              </li>
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-circle-check text-red-600 mr-3 text-lg"></i
+                >Tham gia Campaign sàn
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="block w-full py-3 text-center bg-red-600 text-white font-bold rounded-xl hover:bg-red-700 transition shadow-lg shadow-red-200"
+              >Đăng ký ngay</a
+            >
+          </div>
+          <!-- Pack 3 -->
+          <div
+            class="border border-gray-100 bg-white rounded-3xl p-8 hover:border-red-200 hover:shadow-xl hover:shadow-red-50 transition duration-300">
+            <h4 class="font-bold text-xl mb-4 text-gray-800">
+              Gói Doanh Nghiệp
+            </h4>
+            <ul class="text-sm text-gray-500 space-y-4 mb-8">
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-check-circle text-red-600 mr-3 text-lg"></i
+                >Chiến lược Branding tổng thể
+              </li>
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-check-circle text-red-600 mr-3 text-lg"></i
+                >Livestream bán hàng chuyên nghiệp
+              </li>
+              <li class="flex items-center">
+                <i
+                  class="fa-solid fa-check-circle text-red-600 mr-3 text-lg"></i
+                >Booking KOC/KOL & External Ads
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="block w-full py-3 text-center border border-gray-200 text-gray-600 font-bold rounded-xl hover:bg-gray-900 hover:text-white transition"
+              >Tư vấn chi tiết</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US (Dark Theme with Red Accents for Contrast) -->
+    <section class="py-24 bg-gray-900 text-white relative overflow-hidden">
+      <!-- Abstract Red Glow -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-red-600 rounded-full opacity-10 blur-[100px] -mr-20 -mt-20"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <span
+              class="text-red-500 font-bold uppercase text-sm tracking-widest mb-2 block"
+              >Lợi thế cạnh tranh</span
+            >
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">
+              Tại sao chọn Betacom?
+            </h2>
+            <p class="text-gray-400 mb-10 text-lg leading-relaxed">
+              Chúng tôi không chỉ là đơn vị cung cấp dịch vụ, chúng tôi là
+              "Phòng Marketing thuê ngoài" tâm huyết nhất của bạn.
+            </p>
+            <div class="space-y-8">
+              <div class="flex gap-5">
+                <div
+                  class="w-14 h-14 bg-red-600/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-red-600/20">
+                  <i class="fa-solid fa-bolt text-2xl text-red-500"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-xl mb-1">Tốc độ & Hiệu quả</h4>
+                  <p class="text-gray-400 text-sm">
+                    Quy trình triển khai nhanh chóng, cam kết KPI rõ ràng trong
+                    hợp đồng.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-5">
+                <div
+                  class="w-14 h-14 bg-red-600/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-red-600/20">
+                  <i class="fa-solid fa-users-gear text-2xl text-red-500"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-xl mb-1">Đội ngũ Thực chiến</h4>
+                  <p class="text-gray-400 text-sm">
+                    Nhân sự có kinh nghiệm quản lý các gian hàng Mall doanh thu
+                    tỷ đồng.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-5">
+                <div
+                  class="w-14 h-14 bg-red-600/10 rounded-2xl flex items-center justify-center flex-shrink-0 border border-red-600/20">
+                  <i class="fa-solid fa-headset text-2xl text-red-500"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-xl mb-1">Hỗ trợ 24/7</h4>
+                  <p class="text-gray-400 text-sm">
+                    Luôn sẵn sàng giải quyết mọi vấn đề phát sinh của khách
+                    hàng.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat Cards Grid -->
+          <div class="grid grid-cols-2 gap-6">
+            <div
+              class="bg-gray-800 p-8 rounded-[2rem] text-center hover:bg-gray-700 transition border border-gray-700 group">
+              <div
+                class="text-4xl font-extrabold text-white mb-2 group-hover:text-red-500 transition">
+                500<span class="text-red-600">+</span>
+              </div>
+              <div class="text-sm text-gray-400">Khách hàng</div>
+            </div>
+            <div
+              class="bg-gray-800 p-8 rounded-[2rem] text-center hover:bg-gray-700 transition border border-gray-700 group">
+              <div
+                class="text-4xl font-extrabold text-white mb-2 group-hover:text-red-500 transition">
+                1.5M
+              </div>
+              <div class="text-sm text-gray-400">Đơn hàng/tháng</div>
+            </div>
+            <div
+              class="bg-gray-800 p-8 rounded-[2rem] text-center hover:bg-gray-700 transition border border-gray-700 group">
+              <div
+                class="text-4xl font-extrabold text-white mb-2 group-hover:text-red-500 transition">
+                20<span class="text-red-600">+</span>
+              </div>
+              <div class="text-sm text-gray-400">Giải thưởng</div>
+            </div>
+            <div
+              class="bg-gray-800 p-8 rounded-[2rem] text-center hover:bg-gray-700 transition border border-gray-700 group">
+              <div
+                class="text-4xl font-extrabold text-white mb-2 group-hover:text-red-500 transition">
+                100<span class="text-red-600">%</span>
+              </div>
+              <div class="text-sm text-gray-400">Cam kết tiến độ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDY (White Clean Cards) -->
+    <section id="casestudy" class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center text-gray-900">
+          Case Study Tiêu Biểu
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Case 1 -->
+          <div
+            class="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 momo-card group">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                class="w-full h-56 object-cover group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0"
+                alt="Fashion Brand" />
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur text-red-600 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                Thời trang
+              </div>
+            </div>
+            <div class="p-8">
+              <h3
+                class="font-bold text-xl mb-3 text-gray-900 group-hover:text-red-600 transition">
+                Thương hiệu X: X3 Doanh số
+              </h3>
+              <p class="text-gray-500 text-sm mb-6">
+                Chiến lược tối ưu SEO sàn và chạy Ads nội sàn hiệu quả, tăng
+                200% traffic tự nhiên.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 text-gray-400 group-hover:bg-red-600 group-hover:text-white transition"
+                ><i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Case 2 -->
+          <div
+            class="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 momo-card group">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                class="w-full h-56 object-cover group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0"
+                alt="Cosmetics" />
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur text-red-600 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                Mỹ phẩm
+              </div>
+            </div>
+            <div class="p-8">
+              <h3
+                class="font-bold text-xl mb-3 text-gray-900 group-hover:text-red-600 transition">
+                Mỹ phẩm Y: Bùng nổ TikTok
+              </h3>
+              <p class="text-gray-500 text-sm mb-6">
+                Kết hợp Booking KOC và Livestream liên tục 12h, đạt 1000 đơn
+                trong phiên Mega Sale.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 text-gray-400 group-hover:bg-red-600 group-hover:text-white transition"
+                ><i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Case 3 -->
+          <div
+            class="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 momo-card group">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                class="w-full h-56 object-cover group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0"
+                alt="Tech" />
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur text-red-600 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                Gia dụng
+              </div>
+            </div>
+            <div class="p-8">
+              <h3
+                class="font-bold text-xl mb-3 text-gray-900 group-hover:text-red-600 transition">
+                Gia dụng Z: Mall chuẩn chỉnh
+              </h3>
+              <p class="text-gray-500 text-sm mb-6">
+                Thiết kế bộ nhận diện thương hiệu nhất quán và Setup gian hàng
+                Mall đạt chuẩn 100 điểm.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 text-gray-400 group-hover:bg-red-600 group-hover:text-white transition"
+                ><i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="py-12 border-t border-gray-100 bg-white">
+      <div class="container mx-auto px-4 text-center">
+        <p
+          class="text-gray-400 text-xs font-bold uppercase tracking-widest mb-10">
+          Đối tác chiến lược
+        </p>
+        <div
+          class="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+          <!-- Logo giả lập -->
+          <i
+            class="fa-brands fa-google text-4xl hover:text-red-600 transition"></i>
+          <i
+            class="fa-brands fa-facebook text-4xl hover:text-blue-700 transition"></i>
+          <i
+            class="fa-brands fa-tiktok text-4xl hover:text-black transition"></i>
+          <i
+            class="fa-brands fa-shopify text-4xl hover:text-green-600 transition"></i>
+          <i
+            class="fa-brands fa-amazon text-4xl hover:text-orange-600 transition"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS / TIN TỨC -->
+    <section id="news" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-end mb-12">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900">
+              Tin tức & Kiến thức
+            </h2>
+            <p class="text-gray-500 mt-2">
+              Cập nhật xu hướng Thương mại điện tử mới nhất
+            </p>
+          </div>
+          <a
+            href="#"
+            class="hidden md:block px-6 py-2 rounded-full border border-gray-300 font-bold text-sm hover:bg-white hover:border-red-600 hover:text-red-600 transition"
+            >Xem tất cả</a
+          >
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <!-- Featured News -->
+          <div class="group cursor-pointer">
+            <div class="rounded-3xl overflow-hidden mb-6 relative shadow-md">
+              <img
+                src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                class="w-full h-80 object-cover group-hover:scale-105 transition duration-700 grayscale group-hover:grayscale-0"
+                alt="News" />
+              <div
+                class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-lg shadow-lg">
+                Nổi bật
+              </div>
+            </div>
+            <span class="text-red-600 font-bold text-xs uppercase tracking-wide"
+              >Thông tin ngành</span
+            >
+            <h3
+              class="text-2xl font-bold mt-2 mb-3 group-hover:text-red-600 transition">
+              Xu hướng E-commerce 2025: Khi AI lên ngôi
+            </h3>
+            <p class="text-gray-500 line-clamp-2 mb-4">
+              Trí tuệ nhân tạo đang thay đổi cách vận hành sàn thương mại điện
+              tử như thế nào? Cùng Betacom phân tích các cơ hội và thách thức.
+            </p>
+          </div>
+
+          <!-- Side News List -->
+          <div class="space-y-8">
+            <div class="flex gap-6 group cursor-pointer items-start">
+              <img
+                src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                class="w-28 h-28 rounded-2xl object-cover flex-shrink-0 shadow-sm grayscale group-hover:grayscale-0 transition"
+                alt="Thumb" />
+              <div>
+                <div class="text-xs font-bold text-red-600 mb-1">TMĐT</div>
+                <h4
+                  class="font-bold text-lg leading-snug group-hover:text-red-600 transition mb-2">
+                  Cách tối ưu gian hàng Shopee Mall chuẩn SEO mới nhất 2024
+                </h4>
+                <span class="text-gray-400 text-xs block">18/10/2024</span>
+              </div>
+            </div>
+            <div class="flex gap-6 group cursor-pointer items-start">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                class="w-28 h-28 rounded-2xl object-cover flex-shrink-0 shadow-sm grayscale group-hover:grayscale-0 transition"
+                alt="Thumb" />
+              <div>
+                <div class="text-xs font-bold text-red-600 mb-1">Marketing</div>
+                <h4
+                  class="font-bold text-lg leading-snug group-hover:text-red-600 transition mb-2">
+                  5 Chiến lược Livestream nghìn đơn trên TikTok Shop
+                </h4>
+                <span class="text-gray-400 text-xs block">15/10/2024</span>
+              </div>
+            </div>
+            <div class="flex gap-6 group cursor-pointer items-start">
+              <img
+                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                class="w-28 h-28 rounded-2xl object-cover flex-shrink-0 shadow-sm grayscale group-hover:grayscale-0 transition"
+                alt="Thumb" />
+              <div>
+                <div class="text-xs font-bold text-red-600 mb-1">Nội bộ</div>
+                <h4
+                  class="font-bold text-lg leading-snug group-hover:text-red-600 transition mb-2">
+                  Betacom tuyển dụng Senior Account Manager (Thu nhập hấp dẫn)
+                </h4>
+                <span class="text-gray-400 text-xs block">10/10/2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div
+          class="bg-red-600 rounded-[3rem] p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl shadow-red-200 group">
+          <!-- Animated Background -->
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
+          <div
+            class="absolute -top-1/2 -right-1/2 w-full h-full bg-white opacity-5 rounded-full transform rotate-45 group-hover:rotate-90 transition duration-[2s]"></div>
+
+          <div class="relative z-10 max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">
+              Sẵn sàng bứt phá doanh thu?
+            </h2>
+            <p class="text-red-100 text-lg mb-12">
+              Để lại thông tin để nhận tư vấn miễn phí và bản kế hoạch sơ bộ từ
+              chuyên gia của Betacom ngay hôm nay.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-5">
+              <a
+                href="#contact"
+                class="bg-white text-red-600 px-12 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-1">
+                Đăng ký tư vấn
+              </a>
+              <a
+                href="tel:0912345678"
+                class="border-2 border-red-400 text-white px-12 py-4 rounded-full font-bold text-lg hover:bg-red-700 hover:border-red-700 transition">
+                Gọi ngay: 1900 xxxx
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-white pt-20 pb-10 border-t border-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-12 mb-16">
+          <!-- Info -->
+          <div class="col-span-1 md:col-span-2 pr-10">
+            <div class="flex items-center gap-2 mb-6">
+              <div
+                class="w-10 h-10 bg-red-600 text-white rounded-xl flex items-center justify-center font-bold text-xl">
+                B
+              </div>
+              <span
+                class="text-2xl font-extrabold text-gray-900 tracking-tighter"
+                >BETACOM</span
+              >
+            </div>
+            <p class="text-gray-500 mb-8 max-w-sm leading-relaxed">
+              Đối tác tăng trưởng tin cậy của doanh nghiệp. Chúng tôi cam kết
+              mang lại hiệu quả thực tế qua từng con số.
+            </p>
+            <div class="space-y-4 text-sm text-gray-600">
+              <p class="flex items-start">
+                <i class="fa-solid fa-location-dot mt-1 w-6 text-red-600"></i>
+                Tầng 5, Tòa nhà ABC, Quận 1, TP.Hồ Chí Minh
+              </p>
+              <p class="flex items-center">
+                <i class="fa-solid fa-phone w-6 text-red-600"></i> Hotline: 1900
+                xxxx
+              </p>
+              <p class="flex items-center">
+                <i class="fa-solid fa-envelope w-6 text-red-600"></i> Email:
+                contact@betacom.vn
+              </p>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div>
+            <h4 class="font-bold text-gray-900 mb-8 text-lg">Về Chúng Tôi</h4>
+            <ul class="space-y-4 text-gray-500 text-sm font-medium">
+              <li>
+                <a href="#" class="hover:text-red-600 transition"
+                  >Giới thiệu chung</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-red-600 transition"
+                  >Văn hóa doanh nghiệp</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-red-600 transition"
+                  >Tuyển dụng nhân tài</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-red-600 transition"
+                  >Chính sách bảo mật</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Socials & Newsletter -->
+          <div>
+            <h4 class="font-bold text-gray-900 mb-8 text-lg">Kết nối</h4>
+            <div class="flex gap-4 mb-8">
+              <!-- Monochrome Social Icons that turn colored on hover -->
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition duration-300"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition duration-300"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition duration-300"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition duration-300"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-4 text-sm">
+              Đăng ký nhận tin
+            </h4>
+            <form class="flex">
+              <input
+                type="email"
+                placeholder="Email của bạn"
+                class="bg-gray-50 border border-gray-200 px-4 py-3 rounded-l-xl text-sm w-full focus:outline-none focus:border-red-500 transition" />
+              <button
+                class="bg-red-600 text-white px-5 rounded-r-xl hover:bg-red-700 transition">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400 font-medium">
+          <p>&copy; 2024 Betacom Agency. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-red-600 transition">Privacy Policy</a>
+            <a href="#" class="hover:text-red-600 transition"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
